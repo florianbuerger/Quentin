@@ -19,6 +19,13 @@
 		17DD4D5618B497F0004C62AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17DD4D3E18B497F0004C62AD /* UIKit.framework */; };
 		17DD4D5E18B497F0004C62AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17DD4D5C18B497F0004C62AD /* InfoPlist.strings */; };
 		17DD4D6018B497F0004C62AD /* QuentinTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DD4D5F18B497F0004C62AD /* QuentinTests.m */; };
+		17EAB6A718B4B0B900B79F98 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EAB6A618B4B0B900B79F98 /* EventKit.framework */; };
+		D25890E85386EC3260CC4B41 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2589245E8797F7283A4784D /* Localizable.strings */; };
+		D258921B52408FAF8D314FB6 /* QTNURLKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = D258927437278C6B73EFEC81 /* QTNURLKeys.m */; };
+		D25897ECBC8251D885840111 /* QTNDebugViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2589D40821F69DEE52719D6 /* QTNDebugViewController.m */; };
+		D25898F8E72946B44F27CE86 /* QTNEntryView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2589620304DBF8F0F1EEF87 /* QTNEntryView.m */; };
+		D2589A22FD31A5FCDC140EB2 /* NSURL+QTNParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = D258900CF3BB5E4F596CFD32 /* NSURL+QTNParameters.m */; };
+		D2589BDAF96E58D3B5CC1341 /* QTNEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D25890D10E24F85C5508D799 /* QTNEntryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,18 @@
 		17DD4D5B18B497F0004C62AD /* QuentinTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuentinTests-Info.plist"; sourceTree = "<group>"; };
 		17DD4D5D18B497F0004C62AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		17DD4D5F18B497F0004C62AD /* QuentinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuentinTests.m; sourceTree = "<group>"; };
+		17EAB6A618B4B0B900B79F98 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		D258900CF3BB5E4F596CFD32 /* NSURL+QTNParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+QTNParameters.m"; sourceTree = "<group>"; };
+		D2589079C4D80F6A98F8A799 /* QTNEntryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTNEntryView.h; sourceTree = "<group>"; };
+		D25890D10E24F85C5508D799 /* QTNEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTNEntryViewController.m; sourceTree = "<group>"; };
+		D2589245E8797F7283A4784D /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		D258927437278C6B73EFEC81 /* QTNURLKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTNURLKeys.m; sourceTree = "<group>"; };
+		D2589583FBAE170A7E56FF51 /* QTNURLKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTNURLKeys.h; sourceTree = "<group>"; };
+		D25895F6842474F2BCDC0BBA /* QTNEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTNEntryViewController.h; sourceTree = "<group>"; };
+		D2589620304DBF8F0F1EEF87 /* QTNEntryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTNEntryView.m; sourceTree = "<group>"; };
+		D25898F2DFC57DECD0095518 /* QTNDebugViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QTNDebugViewController.h; sourceTree = "<group>"; };
+		D2589D40821F69DEE52719D6 /* QTNDebugViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QTNDebugViewController.m; sourceTree = "<group>"; };
+		D2589D6DDF5EE00A93A1B521 /* NSURL+QTNParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QTNParameters.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17EAB6A718B4B0B900B79F98 /* EventKit.framework in Frameworks */,
 				17DD4D3D18B497F0004C62AD /* CoreGraphics.framework in Frameworks */,
 				17DD4D3F18B497F0004C62AD /* UIKit.framework in Frameworks */,
 				17DD4D3B18B497F0004C62AD /* Foundation.framework in Frameworks */,
@@ -96,6 +116,7 @@
 		17DD4D3918B497F0004C62AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17EAB6A618B4B0B900B79F98 /* EventKit.framework */,
 				17DD4D3A18B497F0004C62AD /* Foundation.framework */,
 				17DD4D3C18B497F0004C62AD /* CoreGraphics.framework */,
 				17DD4D3E18B497F0004C62AD /* UIKit.framework */,
@@ -111,6 +132,17 @@
 				17DD4D4A18B497F0004C62AD /* QTNAppDelegate.m */,
 				17DD4D4C18B497F0004C62AD /* Images.xcassets */,
 				17DD4D4118B497F0004C62AD /* Supporting Files */,
+				D25890D10E24F85C5508D799 /* QTNEntryViewController.m */,
+				D25895F6842474F2BCDC0BBA /* QTNEntryViewController.h */,
+				D2589D40821F69DEE52719D6 /* QTNDebugViewController.m */,
+				D25898F2DFC57DECD0095518 /* QTNDebugViewController.h */,
+				D258900CF3BB5E4F596CFD32 /* NSURL+QTNParameters.m */,
+				D2589D6DDF5EE00A93A1B521 /* NSURL+QTNParameters.h */,
+				D2589620304DBF8F0F1EEF87 /* QTNEntryView.m */,
+				D2589079C4D80F6A98F8A799 /* QTNEntryView.h */,
+				D258927437278C6B73EFEC81 /* QTNURLKeys.m */,
+				D2589583FBAE170A7E56FF51 /* QTNURLKeys.h */,
+				D2589245E8797F7283A4784D /* Localizable.strings */,
 			);
 			path = Quentin;
 			sourceTree = "<group>";
@@ -189,9 +221,12 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = QTN;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = keslcod;
 				TargetAttributes = {
+					17DD4D3618B497F0004C62AD = {
+						DevelopmentTeam = Z7W2649PM2;
+					};
 					17DD4D5118B497F0004C62AD = {
 						TestTargetID = 17DD4D3618B497F0004C62AD;
 					};
@@ -222,6 +257,7 @@
 			files = (
 				17DD4D4518B497F0004C62AD /* InfoPlist.strings in Resources */,
 				17DD4D4D18B497F0004C62AD /* Images.xcassets in Resources */,
+				D25890E85386EC3260CC4B41 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +278,11 @@
 			files = (
 				17DD4D4B18B497F0004C62AD /* QTNAppDelegate.m in Sources */,
 				17DD4D4718B497F0004C62AD /* main.m in Sources */,
+				D2589BDAF96E58D3B5CC1341 /* QTNEntryViewController.m in Sources */,
+				D25897ECBC8251D885840111 /* QTNDebugViewController.m in Sources */,
+				D2589A22FD31A5FCDC140EB2 /* NSURL+QTNParameters.m in Sources */,
+				D25898F8E72946B44F27CE86 /* QTNEntryView.m in Sources */,
+				D258921B52408FAF8D314FB6 /* QTNURLKeys.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +328,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -300,7 +340,6 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -318,6 +357,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "C58538A3-E915-46D5-B8EB-CF1ECD8B4AD2";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -327,7 +367,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -340,7 +379,6 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -351,6 +389,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PROVISIONING_PROFILE = "C58538A3-E915-46D5-B8EB-CF1ECD8B4AD2";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -386,7 +425,6 @@
 		17DD4D6718B497F0004C62AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Quentin.app/Quentin";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -409,7 +447,6 @@
 		17DD4D6818B497F0004C62AD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Quentin.app/Quentin";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -444,6 +481,7 @@
 				17DD4D6518B497F0004C62AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		17DD4D6618B497F0004C62AD /* Build configuration list for PBXNativeTarget "QuentinTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +490,7 @@
 				17DD4D6818B497F0004C62AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
