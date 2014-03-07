@@ -7,7 +7,6 @@
 
 @class EKEventStore;
 
-
 @interface QTNEntryViewController : UIViewController
 - (void)processURL:(NSURL *)url;
 @end

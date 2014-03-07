@@ -5,13 +5,11 @@
 
 #import "QTNDebugViewController.h"
 
-
 @implementation QTNDebugViewController
 
 - (void)viewDidLoad
 {
-  [super viewDidLoad];
+    [super viewDidLoad];
 }
-
 
 @end

@@ -5,9 +5,8 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface QTNDebugViewController : UIViewController
 
-@property(nonatomic, strong) NSURL *url;
+@property (nonatomic, strong) NSURL *url;
 
 @end

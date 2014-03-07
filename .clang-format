@@ -1,0 +1,31 @@
+Language: Cpp
+
+UseTab: Never
+IndentWidth: 4
+TabWidth: 4
+
+AlignTrailingComments: false
+AllowShortFunctionsOnASingleLine: false
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+AlwaysBreakBeforeMultilineStrings: false
+
+BinPackParameters: false
+BreakBeforeBinaryOperators: false
+BreakBeforeBraces: Linux
+BreakBeforeTernaryOperators: false
+BreakConstructorInitializersBeforeComma: false
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+
+ContinuationIndentWidth: 8
+IndentCaseLabels: true
+
+ColumnLimit: 0
+
+ObjCSpaceAfterProperty: true
+ObjCSpaceBeforeProtocolList: true
+
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyParentheses: false
+SpacesInContainerLiterals: true

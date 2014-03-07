@@ -14,7 +14,6 @@ extern NSString *const QTNParameterLocation;
 extern NSString *const QTNParameterPriority;
 extern NSString *const QTNParameterList;
 
-
 // see http://x-callback-url.com/
 extern NSString *const XCallbackParameterSuccess;
 extern NSString *const XCallBackParameterSource;

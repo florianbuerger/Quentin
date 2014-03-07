@@ -5,21 +5,20 @@
 
 #import "NSURL+QTNParameters.h"
 
-
 @implementation NSURL (QTNParameters)
 
 - (NSDictionary *)parameters
 {
-  NSString *query = [self query];
-  NSArray *parameters = [query componentsSeparatedByString:@"&"];
-  NSMutableDictionary *pairs = [NSMutableDictionary dictionary];
-  for (NSString *pair in parameters) {
-    NSArray *bits = [pair componentsSeparatedByString:@"="];
-    NSString *key = [bits[0] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSString *value = [bits[1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    pairs[key] = value;
-  }
-  return [pairs copy];
+    NSString *query = [self query];
+    NSArray *parameters = [query componentsSeparatedByString:@"&"];
+    NSMutableDictionary *pairs = [NSMutableDictionary dictionary];
+    for (NSString *pair in parameters) {
+        NSArray *bits = [pair componentsSeparatedByString:@"="];
+        NSString *key = [bits[0] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString *value = [bits[1] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        pairs[key] = value;
+    }
+    return [pairs copy];
 }
 
 @end

@@ -11,57 +11,57 @@
 #import "QTNDebugViewController.h"
 #import "QTNURLKeys.h"
 
-
 @implementation QTNAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-  self.window.backgroundColor = [UIColor whiteColor];
-  [self.window makeKeyAndVisible];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
 
-  QTNEntryViewController *entryViewController = [[QTNEntryViewController alloc] init];
-  UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:entryViewController];
-  self.window.rootViewController = navigationController;
+    QTNEntryViewController *entryViewController = [[QTNEntryViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:entryViewController];
+    self.window.rootViewController = navigationController;
 
-  return YES;
+    return YES;
 }
 
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  NSURL *url = launchOptions[UIApplicationLaunchOptionsURLKey];
-  if (![[url scheme] isEqualToString:QTNURLScheme]) {
-    return NO;
-  }
+    NSURL *url = launchOptions[UIApplicationLaunchOptionsURLKey];
+    if (![[url scheme] isEqualToString:QTNURLScheme]) {
+        return NO;
+    }
 
-  return YES;
+    return YES;
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-  if (![[url scheme] isEqualToString:QTNURLScheme]) {
-    [self showDebugViewWithURL:url];
-  }
+    if (![[url scheme] isEqualToString:QTNURLScheme]) {
+        [self showDebugViewWithURL:url];
+    }
 
-  NSString *action = [[url baseURL] absoluteString];
-  if (![action isEqualToString:QTNNewReminderBaseURL]) {
-    [self showDebugViewWithURL:url];
-  }
+    NSString *action = [[url baseURL] absoluteString];
+    if (![action isEqualToString:QTNNewReminderBaseURL]) {
+        [self showDebugViewWithURL:url];
+    }
 
-  UINavigationController *navigationController = (UINavigationController *) self.window.rootViewController;
-  QTNEntryViewController *entryViewController = (QTNEntryViewController *) navigationController.topViewController;
-  [entryViewController processURL:url];
+    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    QTNEntryViewController *entryViewController = (QTNEntryViewController *)navigationController.topViewController;
+    [entryViewController processURL:url];
 
-  return YES;
+    return YES;
 }
 
 - (void)showDebugViewWithURL:(NSURL *)url
 {
-  QTNDebugViewController *debugViewController = [[QTNDebugViewController alloc] init];
-  debugViewController.url = url;
-  UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:debugViewController];
-  [self.window.rootViewController presentViewController:navigationController animated:YES completion:nil];
+    QTNDebugViewController *debugViewController = [[QTNDebugViewController alloc] init];
+    debugViewController.url = url;
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:debugViewController];
+    [self.window.rootViewController presentViewController:navigationController
+                                                 animated:YES
+                                               completion:nil];
 }
-
 
 @end
