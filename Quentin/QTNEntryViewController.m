@@ -57,24 +57,28 @@
     NSDictionary *parameters = [url parameters];
     EKReminder *reminder = [EKReminder reminderWithEventStore:self.eventStore];
 
-    NSString *name = parameters[QTNParameterName];
-    if ([name length] > 0) {
-        reminder.title = name;
-        NSLog(@"Reminder.name=%@", name);
+    NSString *names = parameters[QTNParameterName];
+    NSArray *components = [names componentsSeparatedByString:@","];
+
+    for (NSString *name in components) {
+        if ([name length] > 0) {
+            reminder.title = name;
+            NSLog(@"Reminder.name=%@", name);
+        }
+
+        NSString *notes = parameters[QTNParameterNotes];
+        if ([notes length] > 0) {
+            reminder.notes = notes;
+            NSLog(@"Reminder.notes=%@", notes);
+        }
+
+        NSString *list = parameters[QTNParameterList];
+        EKCalendar *calendar = [self findCalendarMatchingName:list];
+        reminder.calendar = calendar;
+        NSLog(@"Reminder.calendar=%@", calendar);
+
+        // TODO: Date, location, prio
     }
-
-    NSString *notes = parameters[QTNParameterNotes];
-    if ([notes length] > 0) {
-        reminder.notes = notes;
-        NSLog(@"Reminder.notes=%@", notes);
-    }
-
-    NSString *list = parameters[QTNParameterList];
-    EKCalendar *calendar = [self findCalendarMatchingName:list];
-    reminder.calendar = calendar;
-    NSLog(@"Reminder.calendar=%@", calendar);
-
-    // TODO: Date, location, prio
 
     NSString *xSource = parameters[XCallBackParameterSource];
 
@@ -104,9 +108,9 @@
 - (void)redirectToURL:(NSURL *)url
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-    if ([[UIApplication sharedApplication] canOpenURL:url]) {
-      [[UIApplication sharedApplication] openURL:url];
-    }
+        if ([[UIApplication sharedApplication] canOpenURL:url]) {
+            [[UIApplication sharedApplication] openURL:url];
+        }
     });
 }
 
@@ -114,19 +118,17 @@
 {
     __block EKCalendar *calendar;
     if ([name length] > 0) {
-        NSArray *possibleCalendars =
-                [self.eventStore calendarsForEntityType:EKEntityTypeReminder];
+        NSArray *possibleCalendars = [self.eventStore calendarsForEntityType:EKEntityTypeReminder];
         [possibleCalendars enumerateObjectsUsingBlock:^(EKCalendar *possibleMatch, NSUInteger idx, BOOL *stop) {
-      if ([possibleMatch.title isEqualToString:name]) {
-        calendar = possibleMatch;
-        *stop = YES;
-      }
+            if ([possibleMatch.title isEqualToString:name]) {
+                calendar = possibleMatch;
+                *stop = YES;
+            }
         }];
     }
 
     if (!calendar) {
-        EKCalendar *defaultCalendar =
-                [self.eventStore defaultCalendarForNewReminders];
+        EKCalendar *defaultCalendar = [self.eventStore defaultCalendarForNewReminders];
         calendar = defaultCalendar;
     }
 
